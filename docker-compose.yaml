@@ -1,0 +1,30 @@
+version: "3.9"
+services:
+  app:
+    build: .
+    image: puzzle/sams:latest
+    # Keep the container alive for interactive access
+    command: ["tail", "-f", "/dev/null"] 
+    environment:
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_USER=sams_user
+      - DB_PASS=sams_password
+      - DB_NAME=sams_db
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: sams_user
+      POSTGRES_PASSWORD: sams_password
+      POSTGRES_DB: sams_db
+    ports:
+      - "5434:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

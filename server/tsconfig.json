@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+      // Base Options 
+      "target": "es2020",                                
+      "module": "commonjs",                              
+      "rootDir": "./src",                                
+      "outDir": "./dist",                                
+      "esModuleInterop": true,                           
+      "forceConsistentCasingInFileNames": true,
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      
+      // Strict Type-Checking Options 
+      "strict": true,                                    
+      "noImplicitAny": true,                             
+      "strictNullChecks": true,                          
+      
+      // Path Resolution 
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "skipLibCheck": true                             
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules", "**/*.test.ts"]
+  }
