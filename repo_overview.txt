@@ -1,0 +1,4 @@
+Project Name: SAMS (Smart Agriculture Monitoring System)
+Primary Language: TypeScript
+Tech Stack: Node.js, Express, React, PostgreSQL, Docker
+Description: This is an IoT application for agriculture. It helps the users to monitor their farmland in defined zones, and assess the health state of those zones through sensors (humidity, moisture, and temperature). This can be used for further decision making. I'm currently simulating sensors with the simulator which generates values for each 'sensor'.
